@@ -1,3 +1,20 @@
-<h2 id="title">Welcome to Ember</h2>
+<h1>Vute Ember Client</h1>
+
+<h2>application template</h2>
+
+<!-- {{#if session.isAuthenticated}}
+  <a {{ action 'invalidateSession' }}>Logout</a>
+{{else}}
+  <a {{ action 'sessionRequiresAuthentication' }}>Login</a>
+{{/if}} -->
+
+{{#if session.isAuthenticated}}
+  <p> Current user : {{session.currentUser.name}} </p>
+  <p><a href="#" {{action 'invalidateSession'}} >Logout</a></p>
+{{else}}
+  <!-- <p><a href="#" {{action 'sessionRequiresAuthentication'}} >Login</a></p> -->
+  <p> {{link-to "Login" 'login'}} </p>
+  <p> {{link-to "Sign up" 'users.new'}} </p>
+{{/if}}
 
 {{outlet}}

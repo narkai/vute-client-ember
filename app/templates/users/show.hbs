@@ -1,0 +1,20 @@
+<h2>users/show template</h2>
+
+<!-- <h4>
+  {{link-to "Users Index" 'users'}}
+</h4> -->
+
+<h4>
+  {{link-to "Edit user" "users.edit" model}}
+</h4>
+
+<ul>
+  <li>Name: {{model.name}}</li>
+  <li>Email: {{model.email}}</li>
+</ul>
+
+<h4>
+  <a href="#" {{action "delete" model}}>Delete user</a>
+</h4>
+
+{{outlet}}

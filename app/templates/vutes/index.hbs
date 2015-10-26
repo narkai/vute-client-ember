@@ -1,0 +1,19 @@
+<h2>vutes/index template</h2>
+
+<h4>{{link-to "New vute" "vutes.new"}}</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Total vutes: {{model.length}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |vute|}}
+      <tr>
+        <td>{{vute.keyword}}</td>
+        <td>{{vute.updated_at}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

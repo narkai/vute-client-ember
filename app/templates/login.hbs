@@ -1,0 +1,16 @@
+<h2>login template</h2>
+
+<form {{action 'authenticate' on='submit'}}>
+  <label for="identification">Login</label>
+  {{input id='identification' placeholder='Enter Login' value=identification}}
+  <label for="password">Password</label>
+  {{input id='password' placeholder='Enter Password' type='password' value=password}}
+  <button type="submit">Login</button>
+</form>
+
+{{#if errorMessage}}
+  <p>
+    <strong>Login failed</strong>
+    <code>{{errorMessage}}</code>
+  </p>
+{{/if}}

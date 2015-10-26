@@ -1,0 +1,30 @@
+<!-- <h1>users/index template</h1>
+<h2>Total users: {{model.length}}</h2>
+<ul>
+{{#each user in model}}
+  <li>
+    {{link-to user.name 'users.show' user.id}}
+  </li>
+{{/each}}
+</ul> -->
+
+<h2>users/index template</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Total Users: {{model.length}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |user|}}
+      <tr>
+        <td>{{link-to user.name "users.show" user}}</td>
+        <td><a href="#" {{action "delete" user}}>Delete user</a></td>
+      </tr>
+    {{/each}}
+    <tr>
+      <td>{{link-to "New User" "users.new"}}</td>
+    </tr>
+  </tbody>
+</table>
