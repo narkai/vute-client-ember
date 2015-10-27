@@ -6,7 +6,6 @@
 </div>
 
 <form {{action "save" on="submit"}}>
-  <h4>{{errorMessage}}</h4>
   <p>
     <label>Firstname:
       {{input value=model.name}}
@@ -25,3 +24,9 @@
   <input type="submit" value="Save"/>
   <button {{action "cancel"}}>Cancel</button>
 </form>
+
+{{#if errorMessage}}
+  <p>
+    <code>{{errorMessage}}</code>
+  </p>
+{{/if}}

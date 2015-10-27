@@ -1,8 +1,13 @@
 <form>
-  <h4>{{errorMessage}}</h4>
   <fieldset>
     {{input value=model.keyword placeholder='keyword'}}
     <button {{action "save"}} class="primary">Save</button>
     <button {{action "cancel"}}>Cancel</button>
   </fieldset>
 </form>
+
+{{#if errorMessage}}
+  <p>
+    <code>{{errorMessage}}</code>
+  </p>
+{{/if}}
