@@ -1,0 +1,13 @@
+{
+  "name": "Vute Client Ember",
+  "description": "Client application for Vute.",
+  "repository": "https://github.com/vuteOrg/client-ember",
+  "logo": "https://raw.githubusercontent.com/vuteOrg/server/master/public/vute_logo_grey.jpg",
+  "keywords": ["vute", "ember"],
+  "env": {
+    "SERVER_URL": {
+      "description": "The url of your server application.",
+      "value": "https://vute-server.herokuapp.com"
+    }
+  }
+}
