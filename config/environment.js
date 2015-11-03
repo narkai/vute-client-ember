@@ -1,5 +1,7 @@
 /* jshint node: true */
 
+// console.log(process.env);
+
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'vute-ember-client',
@@ -18,8 +20,14 @@ module.exports = function(environment) {
       // when it is created
     },
 
+    //K
+
+    API_URL: process.env.API_URL,
+    API_VERSION: process.env.API_VERSION,
+
     contentSecurityPolicy: {
-      'connect-src': "'self' http://localhost:3000",
+      // 'connect-src': "'self' http://localhost:3000",
+      'connect-src': "'self' " + process.env.API_URL,
       'style-src': "'self' 'unsafe-inline'"
     }
   };

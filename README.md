@@ -1,8 +1,6 @@
-# Vute-client-ember
+# vute-client-ember
 
-**VUTE**
-
-Client application for Vute.
+Client application for **Vute**.
 
 **Karian Føhr**
 
@@ -14,7 +12,7 @@ Client application for Vute.
 
 ---
 
-This README outlines the details of collaborating on this Ember application.
+The following outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
 ## Prerequisites

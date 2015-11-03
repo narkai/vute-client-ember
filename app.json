@@ -5,8 +5,8 @@
   "logo": "https://raw.githubusercontent.com/vuteOrg/server/master/public/vute_logo_grey.jpg",
   "keywords": ["vute", "ember"],
   "env": {
-    "SERVER_URL": {
-      "description": "The url of your server application.",
+    "API_URL": {
+      "description": "The url of your Vute server application.",
       "value": "https://vute-server.herokuapp.com"
     }
   }
