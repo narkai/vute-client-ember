@@ -7,8 +7,12 @@
   "buildpacks": [{"url": "https://github.com/tonycoco/heroku-buildpack-ember-cli"}],
   "env": {
     "API_URL": {
-      "description": "The url of your Vute server application.",
+      "description": "The url of Vute server application.",
       "value": "https://vute-server.herokuapp.com"
+    },
+    "API_VERSION": {
+      "description": "The version of Vute server application.",
+      "value": "api/v1"
     }
   }
 }
