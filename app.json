@@ -4,6 +4,7 @@
   "repository": "https://github.com/vuteOrg/client-ember",
   "logo": "https://raw.githubusercontent.com/vuteOrg/server/master/public/vute_logo_grey.jpg",
   "keywords": ["vute", "ember"],
+  "buildpacks": [{"url": "https://github.com/tonycoco/heroku-buildpack-ember-cli"}],
   "env": {
     "API_URL": {
       "description": "The url of your Vute server application.",
