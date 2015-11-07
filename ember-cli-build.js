@@ -7,7 +7,10 @@ module.exports = function(defaults) {
 
     //K
     dotEnv: {
-      clientAllowedKeys: ['API_URL', 'API_VERSION']
+      clientAllowedKeys: ['API_URL', 'API_VERSION'],
+      path: {
+        development: '.env',
+      }
     }
   });
 

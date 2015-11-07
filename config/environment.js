@@ -26,9 +26,13 @@ module.exports = function(environment) {
     API_VERSION: process.env.API_VERSION,
 
     contentSecurityPolicy: {
-      // 'connect-src': "'self' http://localhost:3000",
+      'default-src': "'none'",
+      'script-src': "'self'",
+      'font-src': "'self'",
       'connect-src': "'self' " + process.env.API_URL,
-      'style-src': "'self' 'unsafe-inline'"
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline'",
+      'media-src': "'self'"
     }
   };
 
