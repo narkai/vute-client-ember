@@ -3,8 +3,10 @@
 <h2>application template</h2>
 
 {{#if session.isAuthenticated}}
-  <p> Current user : {{session.currentUser.name}} </p>
-  <p><a href="#" {{action 'invalidateSession'}} >Logout</a></p>
+  {{#if sessionAccount.account}}
+    <p>Signed in as {{sessionAccount.account.name}}</p>
+  {{/if}}
+  <p><a href="#" {{action 'logout'}} >Logout</a></p>
 {{else}}
   <p> {{link-to "Login" 'login'}} </p>
   <p> {{link-to "Sign up" 'users.new'}} </p>
