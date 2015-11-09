@@ -12,7 +12,7 @@
     {{#each model as |vute|}}
       <tr>
         <td>{{vute.keyword}}</td>
-        <td>{{vute.updated_at}}</td>
+        <td><a href="#" {{action "delete" vute}}>Delete</a></td>
       </tr>
     {{/each}}
   </tbody>

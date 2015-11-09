@@ -13,6 +13,7 @@ Router.map(function() {
     this.route('show', { path: ':user_id' }, function() {
       this.resource('vutes', function() {
         this.route('new');
+        this.route('edit');
       });
     });
   });
