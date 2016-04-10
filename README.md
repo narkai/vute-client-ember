@@ -1,8 +1,8 @@
 # vute-client-ember
 
-Client application for **Vute**.
+Ember client application for **Vute**.
 
-by **Karian Føhr**
+by **Karian Før**
 
 ---
 
@@ -16,7 +16,7 @@ by **Karian Føhr**
 * Name you app.
 * Set the `API_URL` environment variable with the url of your server app (ex: `https://vute-server.herokuapp.com`).
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vuteOrg/client-ember)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/lapico/vute-client-ember)
 
 ## Example app
 
@@ -34,4 +34,4 @@ by **Karian Føhr**
 
 ## Server application
 
-* Look at the [vute-server](https://github.com/vuteOrg/server) server application.
+* Look at the [vute-server](https://github.com/lapico/vute-server-rails) server application.

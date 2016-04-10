@@ -1,22 +1,24 @@
 import Ember from 'ember';
-import DS from 'ember-data';
 
-const { service } = Ember.inject;
+const { inject: { service }, RSVP } = Ember;
 
 export default Ember.Service.extend({
   session: service('session'),
   store: service(),
 
-  account: Ember.computed('session.data.authenticated.user_id', function() {
-    const userId = this.get('session.data.authenticated.user_id');
-    // const token = this.get('session.data.authenticated.access_token');
-    // console.log(this.get('session.data.authenticated'));
-    // console.log(userId);
-    // console.log(token);
-    if (!Ember.isEmpty(userId)) {
-      return DS.PromiseObject.create({
-        promise: this.get('store').find('user', userId)
-      });
-    }
-  })
+  loadCurrentUser() {
+    console.log("load user");
+    return new RSVP.Promise((resolve, reject) => {
+      const userId = this.get('session.data.authenticated.user_id');
+      console.log(userId);
+      if (!Ember.isEmpty(userId)) {
+        return this.get('store').find('user', userId).then((user) => {
+          this.set('user', user);
+          resolve();
+        }, reject);
+      } else {
+        resolve();
+      }
+    });
+  }
 });

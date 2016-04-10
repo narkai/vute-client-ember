@@ -1,6 +1,7 @@
 /* jshint node: true */
 
 // console.log(process.env);
+console.log("VUTE CLIENT EMBER STARTED");
 
 module.exports = function(environment) {
   var ENV = {

@@ -2,14 +2,18 @@
 
 <h2>application template</h2>
 
-{{#if session.isAuthenticated}}
+{{main-navigation onLogin='transitionToLoginRoute'}}
+
+{{outlet}}
+
+<!-- {{#if session.isAuthenticated}} -->
   <!-- {{#if sessionAccount.account}}
     <p>Signed in as {{sessionAccount.account.name}}</p>
   {{/if}} -->
-  <p><a href="#" {{action 'logout'}} >Logout</a></p>
+  <!-- <p><a href="#" {{action 'logout'}} >Logout</a></p>
 {{else}}
   <p> {{link-to "Login" 'login'}} </p>
   <p> {{link-to "Sign up" 'users.new'}} </p>
-{{/if}}
+{{/if}} -->
 
-{{outlet}}
+<!-- {{outlet}} -->

@@ -1,0 +1,14 @@
+<nav>
+    <p> {{link-to "Home" 'index'}} </p>
+    <!-- <p> {{link-to "Vutes" users show vutes}} </p> -->
+
+    {{#if session.isAuthenticated}}
+      <p><a href="#" {{action 'logout'}} >Logout</a></p>
+      {{#if sessionAccount.user}}
+        <p>Signed in as {{sessionAccount.user.name}}</p>
+      {{/if}}
+    {{else}}
+      <p> {{link-to "Login" 'login'}} </p>
+      <p> {{link-to "Sign up" 'users.new'}} </p>
+    {{/if}}
+</nav>
