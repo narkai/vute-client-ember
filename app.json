@@ -8,7 +8,7 @@
   "env": {
     "API_URL": {
       "description": "The url of Vute server application.",
-      "value": "https://vute-server.herokuapp.com"
+      "value": "https://vute-server.com"
     },
     "API_VERSION": {
       "description": "The version of Vute server application.",
